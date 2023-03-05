@@ -1,8 +1,8 @@
 import React from "react";
-import AvatarArea from "./headerComponents/AvatarArea";
-import CartArea from "./headerComponents/CartArea";
-import LogoArea from "./headerComponents/LogoArea";
-import NavArea from "./headerComponents/NavArea";
+import AvatarArea from "./AvatarArea";
+import CartArea from "./CartArea";
+import LogoArea from "./LogoArea";
+import NavArea from "./NavArea";
 
 function Header() {
   return (

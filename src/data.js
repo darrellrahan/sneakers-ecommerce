@@ -25,3 +25,26 @@ export const navLinks = [
     url: "/contact",
   },
 ];
+
+export const productImages = [
+  {
+    id: 1,
+    lgImg: "image-product-1.jpg",
+    smImg: "image-product-1-thumbnail.jpg",
+  },
+  {
+    id: 2,
+    lgImg: "image-product-2.jpg",
+    smImg: "image-product-2-thumbnail.jpg",
+  },
+  {
+    id: 3,
+    lgImg: "image-product-3.jpg",
+    smImg: "image-product-3-thumbnail.jpg",
+  },
+  {
+    id: 4,
+    lgImg: "image-product-4.jpg",
+    smImg: "image-product-4-thumbnail.jpg",
+  },
+];

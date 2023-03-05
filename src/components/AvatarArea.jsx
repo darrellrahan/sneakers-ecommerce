@@ -1,5 +1,5 @@
 import React from "react";
-import avatarImg from "/Users/ACER/Documents/Portofolios/e-commerce-frontendmentor/src/assets/images/image-avatar.png";
+import avatarImg from "../assets/images/image-avatar.png";
 
 function AvatarArea() {
   return (

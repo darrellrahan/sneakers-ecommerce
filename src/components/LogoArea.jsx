@@ -1,5 +1,5 @@
 import React from "react";
-import logoImg from "/Users/ACER/Documents/Portofolios/e-commerce-frontendmentor/src/assets/images/logo.svg";
+import logoImg from "../assets/images/logo.svg";
 
 function LogoArea() {
   return (

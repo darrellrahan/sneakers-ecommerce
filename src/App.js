@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Lightbox from "./components/Lightbox";
 import Section from "./components/Section";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Header />
       <Section />
+      <Lightbox />
     </>
   );
 }
