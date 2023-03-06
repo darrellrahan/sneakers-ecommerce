@@ -14,6 +14,10 @@ export function AppProvider({ children }) {
     section: product1Lg,
     lightbox: product1Lg,
   });
+  const [transaction, setTransaction] = useState({
+    amount: 0,
+    finalAmount: 0,
+  });
 
   return (
     <GlobalContext.Provider
@@ -24,6 +28,8 @@ export function AppProvider({ children }) {
         setCurrentLgImg,
         isCart,
         setIsCart,
+        transaction,
+        setTransaction,
       }}
     >
       {children}

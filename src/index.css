@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -21,6 +22,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 ul.links {
@@ -79,6 +81,24 @@ header .right {
 
 /* cart */
 
+.cart-area .amount {
+  color: #f7f8fd;
+  background-color: #ff7d1a;
+  padding: 4px;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  top: 1.5rem;
+  right: 15.25rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cart-btn {
   margin: 1.5rem 0;
 }
@@ -92,10 +112,10 @@ header .right {
 }
 
 .cart-dropdown {
-  width: 320px;
-  height: 220px;
+  width: 350px;
+  height: 225px;
   position: absolute;
-  right: 7%;
+  right: 6%;
   background-color: white;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -107,7 +127,7 @@ header .right {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  margin: 1.25rem 1.5rem;
 }
 
 .cart-dropdown .top button svg {
@@ -123,10 +143,69 @@ header .right {
   border: 1px solid rgba(182, 188, 200, 0.35);
 }
 
+.cart-dropdown .body {
+  padding: 0.25rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.cart-dropdown .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-dropdown .body .left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-dropdown img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.cart-dropdown p {
+  color: #68707d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cart-dropdown p strong {
+  color: #1d2025;
+}
+
+.delete-btn svg {
+  transition: all 0.3s linear;
+}
+
+.delete-btn:hover svg {
+  fill: #ff7d1a;
+}
+
+.checkout-btn {
+  background-color: #ff7d1a;
+  color: #f7f8fd;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s linear;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.checkout-btn:hover {
+  background-color: #ff7d1a95;
+}
+
 .cart-dropdown .empty-cart {
   position: relative;
   top: 22.5%;
-  left: 30%;
+  left: 32.5%;
   font-weight: 700;
   color: #68707d;
   font-size: 14px;
@@ -227,14 +306,36 @@ section {
 .transaction .amount {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 150px;
   background-color: #f7f8fd;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.65rem 1rem;
 }
 
 .amount p {
   font-weight: 700;
+}
+
+.amount button svg {
+  transition: all 0.3s linear;
+}
+
+.amount button:hover svg {
+  fill: #ff7d1a95;
+}
+
+.decrement-btn {
+  color: #ff7d1a;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+
+.decrement-btn:hover {
+  color: #ff7d1a95;
 }
 
 .add button {
