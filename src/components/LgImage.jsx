@@ -2,12 +2,18 @@ import React from "react";
 import { useGlobalContext } from "../context";
 
 function LgImage({ src }) {
-  const { isLightbox, setIsLightbox, currentLgImg, setCurrentLgImg } =
-    useGlobalContext();
+  const {
+    isLightbox,
+    setIsLightbox,
+    currentLgImg,
+    setCurrentLgImg,
+    setCarouselIndex,
+  } = useGlobalContext();
 
   function handleClick() {
     setIsLightbox(true);
     setCurrentLgImg({ ...currentLgImg, lightbox: src });
+    setCarouselIndex(Number(src[28]) - 1);
   }
 
   return (

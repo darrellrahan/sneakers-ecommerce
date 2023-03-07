@@ -4,14 +4,35 @@ import LgImage from "./LgImage";
 import SmImage from "./SmImage";
 
 function Lightbox() {
-  const { isLightbox, setIsLightbox, currentLgImg } = useGlobalContext();
+  const {
+    isLightbox,
+    setIsLightbox,
+    currentLgImg,
+    setCurrentLgImg,
+    carouselIndex,
+    setCarouselIndex,
+  } = useGlobalContext();
 
   function handlePrev() {
-    console.log("deez nuts");
+    if (carouselIndex > 0) {
+      const newIndex = carouselIndex - 1;
+      setCarouselIndex(newIndex);
+      setCurrentLgImg({
+        ...currentLgImg,
+        lightbox: require(`../assets/images/image-product-${newIndex + 1}.jpg`),
+      });
+    }
   }
 
   function handleNext() {
-    console.log("anuva deez nuts");
+    if (carouselIndex < 4) {
+      const newIndex = carouselIndex + 1;
+      setCarouselIndex(newIndex);
+      setCurrentLgImg({
+        ...currentLgImg,
+        lightbox: require(`../assets/images/image-product-${newIndex + 1}.jpg`),
+      });
+    }
   }
 
   if (!isLightbox) return;
@@ -33,18 +54,18 @@ function Lightbox() {
         </div>
         <div
           className="prev-wrapper"
-          // style={{ cursor: carouselIndex === 0 ? "not-allowed" : null }}
+          style={{ cursor: carouselIndex === 0 ? "not-allowed" : null }}
         >
           <button
             className="prev"
             onClick={handlePrev}
-            // style={{ pointerEvents: carouselIndex === 0 ? "none" : null }}
+            style={{ pointerEvents: carouselIndex === 0 ? "none" : null }}
           >
             <svg
               width="12"
               height="18"
               xmlns="http://www.w3.org/2000/svg"
-              stroke="#1D2026"
+              stroke={carouselIndex === 0 ? "#68707d50" : "#1D2026"}
             >
               <path d="M11 1 3 9l8 8" strokeWidth="3" fill="none" />
             </svg>
@@ -52,18 +73,20 @@ function Lightbox() {
         </div>
         <div
           className="next-wrapper"
-          // style={{ cursor: carouselIndex === 3 ? "not-allowed" : null }}
+          style={{ cursor: carouselIndex === 3 ? "not-allowed" : null }}
         >
           <button
             className="next"
             onClick={handleNext}
-            // style={{ pointerEvents: carouselIndex === 3 ? "none" : null }}
+            style={{
+              pointerEvents: carouselIndex === 3 ? "none" : null,
+            }}
           >
             <svg
               width="13"
               height="18"
               xmlns="http://www.w3.org/2000/svg"
-              stroke="#1D2026"
+              stroke={carouselIndex === 3 ? "#68707d50" : "#1D2026"}
             >
               <path d="m2 1 8 8-8 8" strokeWidth="3" fill="none" />
             </svg>

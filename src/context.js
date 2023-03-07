@@ -18,6 +18,7 @@ export function AppProvider({ children }) {
     amount: 0,
     finalAmount: 0,
   });
+  const [carouselIndex, setCarouselIndex] = useState(null);
 
   return (
     <GlobalContext.Provider
@@ -30,6 +31,8 @@ export function AppProvider({ children }) {
         setIsCart,
         transaction,
         setTransaction,
+        carouselIndex,
+        setCarouselIndex,
       }}
     >
       {children}
