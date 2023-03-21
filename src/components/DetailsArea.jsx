@@ -14,11 +14,13 @@ function DetailsArea() {
         Featuring a durable rubber outer sole, they'll withstand everything the
         weather can offer.
       </p>
-      <div className="current-price">
-        <h2 className="price">$125.00</h2>
-        <h3 className="disc-percentage">50%</h3>
+      <div className="prices">
+        <div className="current-price">
+          <h2 className="price">$125.00</h2>
+          <h3 className="disc-percentage">50%</h3>
+        </div>
+        <h4 className="disc-price">$250.00</h4>
       </div>
-      <h4 className="disc-price">$250.00</h4>
       <div className="transaction">
         <div className="amount">
           <div

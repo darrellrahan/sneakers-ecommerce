@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import product1Lg from "./assets/images/image-product-1.jpg";
 
 const GlobalContext = React.createContext();
@@ -18,7 +18,23 @@ export function AppProvider({ children }) {
     amount: 0,
     finalAmount: 0,
   });
-  const [carouselIndex, setCarouselIndex] = useState(null);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+
+  // get window dimensions
+  useEffect(() => {
+    function handleResize() {
+      const newWidth = window.innerWidth;
+      setCurrentWidth(newWidth);
+      setIsLightbox(newWidth < 1000 ? true : false);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
     <GlobalContext.Provider
@@ -33,6 +49,7 @@ export function AppProvider({ children }) {
         setTransaction,
         carouselIndex,
         setCarouselIndex,
+        currentWidth,
       }}
     >
       {children}

@@ -9,7 +9,7 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -91,8 +91,8 @@ header .right {
   text-align: center;
   font-size: 12px;
   position: absolute;
-  top: 1.5rem;
-  right: 15.25rem;
+  top: 3%;
+  right: 16%;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -275,6 +275,12 @@ section {
   margin: 1rem 0;
 }
 
+.details .prices {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .details .current-price {
   display: flex;
   align-items: center;
@@ -404,14 +410,10 @@ section {
   fill: #ff7d1a;
 }
 
-.prev-wrapper,
-.next-wrapper {
-  position: absolute;
-  top: 40%;
-}
-
 .prev,
 .next {
+  position: absolute;
+  top: 40%;
   width: 50px;
   height: 50px;
   display: flex;
@@ -420,22 +422,153 @@ section {
   color: #1d2025;
   background-color: white;
   border-radius: 100%;
-}
-
-.prev svg,
-.next svg {
+  font-size: 1.75rem;
   transition: all 0.3s linear;
 }
 
-.prev:hover svg,
-.next:hover svg {
-  stroke: #ff7d1a;
+.prev:hover,
+.next:hover {
+  color: #ff7d1a;
 }
 
-.prev-wrapper {
+.prev {
   left: -24px;
 }
 
-.next-wrapper {
+.next {
   right: -24px;
+}
+
+@media (max-width: 1000px) {
+  /* header */
+
+  header {
+    margin: 0.2rem 1rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  header .left,
+  header .right {
+    gap: 1rem;
+  }
+
+  header .left {
+    flex-direction: row-reverse;
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
+    height: 20px;
+  }
+
+  .avatar-img {
+    width: 32px;
+  }
+
+  /* cart */
+
+  .cart-area .amount {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    top: 2%;
+    right: 15%;
+  }
+
+  .cart-dropdown {
+    z-index: 1001;
+  }
+
+  /* section */
+
+  section {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 0.25rem;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .details .brand {
+    font-size: 0.75rem;
+  }
+
+  .details .name {
+    font-size: 1.75rem;
+  }
+
+  .details .desc {
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+  }
+
+  .details .prices {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .details .current-price {
+    gap: 0.75rem;
+  }
+
+  .details .transaction {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .transaction .amount {
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+
+  .add {
+    width: 100%;
+  }
+
+  .add button {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  /* lightbox */
+
+  .lightbox-ct {
+    position: initial;
+    transform: translate(0);
+    z-index: 0;
+  }
+
+  .lightbox-ct .lg-img-wrapper {
+    width: 100%;
+  }
+
+  .lightbox-ct .lg-img-wrapper img {
+    width: 100%;
+    height: 280px;
+    border-radius: 0;
+  }
+
+  .prev,
+  .next {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+
+  .prev {
+    left: 1rem;
+  }
+
+  .next {
+    right: 1rem;
+  }
 }

@@ -1,15 +1,25 @@
 import React from "react";
+import { useGlobalContext } from "../context";
 import AvatarArea from "./AvatarArea";
 import CartArea from "./CartArea";
 import LogoArea from "./LogoArea";
 import NavArea from "./NavArea";
+import { AiOutlineMenu } from "react-icons/ai";
 
 function Header() {
+  const { currentWidth } = useGlobalContext();
+
   return (
     <header>
       <div className="left">
         <LogoArea />
-        <NavArea />
+        {currentWidth < 1000 ? (
+          <button className="menu-icon">
+            <AiOutlineMenu />
+          </button>
+        ) : (
+          <NavArea />
+        )}
       </div>
       <div className="right">
         <CartArea />
