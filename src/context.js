@@ -8,7 +8,9 @@ export function useGlobalContext() {
 }
 
 export function AppProvider({ children }) {
-  const [isLightbox, setIsLightbox] = useState(false);
+  const [isLightbox, setIsLightbox] = useState(
+    window.innerWidth < 1000 ? true : false
+  );
   const [isCart, setIsCart] = useState(false);
   const [currentLgImg, setCurrentLgImg] = useState({
     section: product1Lg,
