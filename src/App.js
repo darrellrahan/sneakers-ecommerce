@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Lightbox from "./components/Lightbox";
 import Section from "./components/Section";
+import Sidebar from "./components/Sidebar";
 import { useGlobalContext } from "./context";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Section />
       {currentWidth > 1000 && <Lightbox />}
+      <Sidebar />
     </>
   );
 }

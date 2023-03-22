@@ -11,6 +11,7 @@ export function AppProvider({ children }) {
   const [isLightbox, setIsLightbox] = useState(
     window.innerWidth < 1000 ? true : false
   );
+  const [isSidebar, setIsSidebar] = useState(false);
   const [isCart, setIsCart] = useState(false);
   const [currentLgImg, setCurrentLgImg] = useState({
     section: product1Lg,
@@ -52,6 +53,8 @@ export function AppProvider({ children }) {
         carouselIndex,
         setCarouselIndex,
         currentWidth,
+        isSidebar,
+        setIsSidebar,
       }}
     >
       {children}

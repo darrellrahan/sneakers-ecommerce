@@ -7,14 +7,14 @@ import NavArea from "./NavArea";
 import { AiOutlineMenu } from "react-icons/ai";
 
 function Header() {
-  const { currentWidth } = useGlobalContext();
+  const { currentWidth, setIsSidebar } = useGlobalContext();
 
   return (
     <header>
       <div className="left">
         <LogoArea />
         {currentWidth < 1000 ? (
-          <button className="menu-icon">
+          <button className="menu-icon" onClick={() => setIsSidebar(true)}>
             <AiOutlineMenu />
           </button>
         ) : (
