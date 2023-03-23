@@ -1,4 +1,4 @@
-# Frontend Mentor - E-commerce product page (Not responsive yet)
+# Frontend Mentor - E-commerce product page
 
 This is an [E-commerce product page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) challenged by [Frontend Mentor](https://www.frontendmentor.io).
 
@@ -16,6 +16,7 @@ Users should be able to:
 ### Preview
 
 [![image.png](https://i.postimg.cc/kGBdFGFr/image.png)](https://postimg.cc/QKGPjXyS)
+[![image.png](https://i.postimg.cc/SN0nmwV3/image.png)](https://postimg.cc/8sHpHX2m)
 
 ### Demo
 
@@ -23,4 +24,4 @@ https://darrellrahan-ecommerce.netlify.app/
 
 ### Built with
 
-[React](https://reactjs.org/) - JS library
+[React](https://reactjs.org/)
